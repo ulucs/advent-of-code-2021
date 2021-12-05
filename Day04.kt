@@ -52,7 +52,7 @@ fun main() {
     nums.forEach { num ->
       cards.forEach { it.check(num) }
       if (cards.all() {it.isComplete()}) {
-        cards.filter { it.last == num}.inspect()
+        cards.filter { it.last == num }.inspect()
         val last = cards.find { it.last == num }
         return num.inspect() * last!!.uncheckedNums().inspect().sum()
       }
